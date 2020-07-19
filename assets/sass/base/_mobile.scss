@@ -1,0 +1,114 @@
+@media screen and (max-width: 576px) {
+   
+    body.index {
+        grid-template-rows: 0 60vh 1fr 40px;
+    }
+    header {
+        position: sticky;
+        z-index: 1000;
+        .menuPrincipal {
+            padding: 0 10px;
+            button {
+                span {
+                    border: none;
+                    color: rgba(255, 255, 255, 0.5);
+                    text-indent: 20px;
+                    padding-top: 13px;
+                }
+            }
+            ul {
+                width: 50vw;
+                background: #ffe7c5;
+                border-radius: 3px;
+                border: 1px solid #e53f3f;
+                box-shadow: 2px 2px 10px rgba(40,40,40,.5);
+                li {
+                    width: 100%;
+                    border-bottom: 1px solid $color-primario;
+                    &:last-child {
+                        border-bottom: none;
+                    }
+                }
+            }
+        }
+    }
+    
+    .btn-chat {
+        width: 65vw;
+    }
+    
+    section.logo {
+        padding-top: 0;
+        p {
+            padding: 12px;
+            width: 90%;
+            margin: 12px auto 6px auto;
+        }
+        .contenedor-logo {
+            margin: 35px auto 0 auto;
+            img {
+                height: 15vh;
+            }
+        }
+    }
+
+    @keyframes clipPathDown {
+        0% {
+            clip-path: ellipse(90% 100% at 50% 0%);
+            background-position: top;
+        }
+        100% {
+            clip-path: ellipse(100% 100% at 50% 0%);
+            background-position: center;
+        }
+    }
+
+    .mensaje-principal p {
+        display: none;
+    }
+    
+    section.showcase {
+        top: -55px;
+        width: 100vw;
+        padding: 0 12px;
+        .item-showcase {
+           margin-top: 0;
+           display: grid;
+           grid-template-columns: repeat(3, 1fr);
+           grid-template-rows: 1fr 35px 80px;
+           grid-template-areas: 
+               "foto foto foto"
+               "nombre nombre nombre"
+               "ingredientes ingredientes precio"
+               ;
+           grid-column-gap: 6px;
+           grid-row-gap: 6px;
+           &--foto {
+               height: 145px;
+               margin: 0 auto;
+               img {
+                   height: 180px;
+               }
+           }
+           &--nombre {
+               padding: 0;
+           }
+           &--ingredientes {
+               padding: 0;
+           }
+           &--precio {
+              h3 {
+                  font-size: 1.2rem;
+              }
+           }
+        }
+    }
+    body.seccion {
+        grid-template-rows: 50px 1fr 40px;
+    }
+  
+
+    .no-mobile {
+        display: none !important;
+    }
+}

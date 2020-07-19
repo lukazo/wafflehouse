@@ -1,0 +1,14 @@
+{
+  "name": "clasesass",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass assets/sass/main.scss assets/estilo.css -w"
+  },
+  "author": "Lukas",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^4.14.1"
+  }
+}

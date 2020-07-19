@@ -1,0 +1,256 @@
+/*Import*/
+
+@import "abstracts/variables";
+@import "abstracts/mixins";
+
+@import "base/animations";
+@import "base/base";
+@import "base/typography";
+
+@import "components/buttons";
+
+body {
+    margin: 0;
+    height: 100vh;
+    display: grid;
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+}
+
+footer {
+    grid-area: footer;
+    background: #fff;
+    /* background-image: url(../img/pattern-1.png); */
+    background-repeat: repeat-x;
+    position: sticky;
+    bottom: 0;
+    display: flex;
+    flex-flow: row wrap; 
+    justify-content: center;
+    align-items: center;
+    .rrss {
+        text-align: center;
+        font-size: 2.2rem;
+    }
+    .links-relativos {
+        ul {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+            margin-left: 12px;
+        }
+    }
+}
+
+.nav-active {
+
+}
+
+/*==Estilos==*/
+
+body.index {
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 80px 60vh 1fr 40px;
+    grid-template-areas: 
+        "header header header header header header"
+        "logo logo logo logo logo logo"
+        "showcase showcase showcase showcase showcase showcase"
+        "footer footer footer footer footer footer"
+    ;
+}
+
+header {
+    background-color: navajowhite;
+    grid-area: header;
+    display: grid;
+    .menuPrincipal {
+        padding: 0 30px;
+        display: flex;
+        flex-flow: row wrap;
+        button {
+            border: none;
+        }
+        span {
+            font-size: 1.2em;
+            display: inline-block;
+            flex-grow: 0;
+            padding: 10px;
+            text-transform: uppercase;
+            letter-spacing: .5em;
+            text-indent: 6px;
+            color: palevioletred;
+            border: 1px solid palevioletred;
+            height: 40px;
+            align-self: center;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-evenly;
+            align-content: flex-start;
+            flex-grow: 1;
+            li {
+                padding: 12px 0;
+                a {
+                    color: $color-primario !important;
+                    font-size: 1.3rem;
+                    flex-grow: 1;
+                    text-align: center;
+                    margin: 0px 16px;
+                }
+            }
+        }
+    }
+}
+
+section.logo {
+    grid-area: logo;
+    background-image: linear-gradient(
+        to right bottom,
+        rgba(90, 30, 10, .6),
+        rgba(90, 30, 10, .4)), 
+        url(../img/bg-3.jpg);
+    background-size: cover;
+    animation: clipPathDown 5s ease-out;
+    animation-fill-mode: forwards;
+    text-align: center;
+    color: oldlace;
+    .contenedor-logo {
+        animation: scaleLogo 1s ease-in-out 1s;
+        animation-fill-mode: backwards;
+        backface-visibility: hidden;
+        margin: 15px auto;
+        text-align: center;
+        img {
+            height: 120px;
+            margin: 10px 0;
+            text-align: center;
+        }
+    }
+    h1 {
+        font-weight: 400;
+        font-size: 2.3rem;
+    }
+    h2 {
+        font-style: italic;
+        font-size: 1.8rem;
+    }
+    p {
+        font-size: 1.3rem;
+        line-height: 1.6;
+        font-weight: 700;
+        display: block;
+        border-radius: 5px;
+        padding: 20px;
+        width: 30vw;
+        background: rgb(255, 231, 197);
+        color: rgb(149, 30, 3);
+        margin: 12px auto 6px auto;
+    }
+}
+
+section.frontMsg {
+    grid-area: frontMsg;
+    position: relative;
+}
+
+section.showcase {
+    grid-area: showcase;
+    position: relative;
+    top: -15vh;
+    width: 55vw;
+    margin: 0 auto;
+    .item-showcase {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: 1fr 2fr;
+        grid-template-areas: 
+            "foto foto nombre nombre nombre precio"
+            "foto foto ingredientes ingredientes ingredientes precio"
+            ;
+        grid-column-gap: 6px;
+        grid-row-gap: 6px;
+        border-radius: 5px;
+        &--foto {
+            grid-area: foto;
+            img {
+                padding: 10px;
+                height: 225px;
+            }
+        }
+        &--nombre {
+            padding: 10px;
+            grid-area: nombre;
+            background: rgba(229, 63, 63, .8);
+            color: #fafafa;
+            h2 {
+                margin: 5px;
+                padding: 5px;
+            }            
+        }
+        &--ingredientes {
+            padding: 10px;
+            grid-area: ingredientes;
+            background: rgba(229, 63, 63, .8);
+            color: #fafafa;
+            ul {
+                margin: 5px;
+                padding: 5px;
+            }
+        }
+        &--precio {
+            padding: 10px;
+            grid-area: precio;
+            background: rgba(229, 63, 63, .8);
+            color: #fafafa;
+            h3 {
+                font-size: 1.25rem;
+            }
+            h4 {
+                font-size: 28px;
+            }
+        }
+    }
+}
+
+/*Secciones*/
+
+body.seccion {
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 80px 1fr 40px;
+    grid-template-areas: 
+        "header header header header header header"
+        "content-main content-main content-main content-main content-main content-main"
+        "footer footer footer footer footer footer"
+    ;
+    section {
+        @include padding-page(20px);
+        &.content-main {
+            grid-area: content-main;
+        }
+    }
+}
+
+$colores-showcase: (
+    sc--uno: rgba(233, 136, 24, 0.7),
+    sc--dos: rgba(107, 190, 107, .7),
+    sc--tres: rgba(163, 74, 190, .7)
+);
+
+@each $clase-color, $sc-color in $colores-showcase {
+    .#{$clase-color} {
+        border: 6px solid $sc-color;
+    }
+} 
+
+// BUCLE DEMO PARA DESAFÍO
+
+// @for $i from 1 through 3 {
+//     .carousel-item .item--showcase.show-#{$i} {
+//         width: 100%;
+//     }
+// }
+
+@import "base/mobile";

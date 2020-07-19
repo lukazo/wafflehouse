@@ -1,0 +1,66 @@
+@media screen and (max-width: 576px) {
+   
+    body.index {
+        grid-template-rows: 100px 60vh 1fr 40px;
+    }
+    header {
+        position: sticky;
+        z-index: 1000;
+    }
+    .menuPrincipal {
+        padding: 0;
+    }
+    .btn-chat {
+        width: 65vw;
+    }
+    
+    section.logo {
+        padding-top: 5vh;
+    }
+    section.showcase {
+        width: 100vw;
+        padding: 0 12px;
+    }
+    @keyframes clipPathDown {
+        0% {
+            clip-path: ellipse(90% 100% at 50% 0%);
+            background-position: top;
+        }
+        100% {
+            clip-path: ellipse(100% 100% at 50% 0%);
+            background-position: center;
+        }
+    }
+    .contenedor-logo {
+        margin: 5px auto 0 auto;
+    }
+    .contenedor-logo img {
+        height: 15vh;
+    }
+    .mensaje-principal p {
+        display: none;
+    }
+    
+    .logo p {
+        padding: 12px;
+        width: 90%;
+        margin: 12px auto 6px auto;
+    }
+    section.showcase .item--showcase {
+        margin-top: -15vh;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr 40px 120px;
+        grid-template-areas: 
+            "foto foto foto"
+            "nombre nombre nombre"
+            "ingredientes ingredientes precio"
+            ;
+        grid-column-gap: 6px;
+        grid-row-gap: 6px;
+    }
+    .foto--item {
+        text-align: center;
+    }
+
+}

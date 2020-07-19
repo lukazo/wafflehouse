@@ -1,0 +1,317 @@
+/*Import*/
+@keyframes scaleLogo {
+  0% {
+    transform: scale(0);
+    opacity: 0; }
+  70% {
+    transform: scale(1.1);
+    opacity: 1; }
+  85% {
+    transform: scale(0.9); }
+  100% {
+    transform: scale(1); } }
+
+@keyframes clipPathDown {
+  0% {
+    clip-path: ellipse(65% 100% at 50% 0%);
+    background-position: top; }
+  100% {
+    clip-path: ellipse(95% 100% at 50% 0%);
+    background-position: center; } }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%;
+  margin: 0;
+  padding: 0; }
+
+ol, ul {
+  list-style: none;
+  margin-bottom: 0; }
+
+html {
+  font-family: "Roboto", sans-serif; }
+
+h1, h2 {
+  font-family: "Nunito", sans-serif; }
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 700; }
+
+/*Botones*/
+a,
+.btn:link,
+.btn:visited {
+  text-decoration: none;
+  display: inline-block;
+  backface-visibility: hidden; }
+
+.btn-chat {
+  padding: 12px 10px;
+  background: #e53f3f;
+  color: #ffe7c5;
+  font-size: 1.3rem;
+  border-radius: 5px;
+  width: 30vw;
+  transition: all .2s ease-out; }
+  .btn-chat:hover {
+    transform: translateY(-3px);
+    color: #ffe7c5;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); }
+  .btn-chat:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3); }
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: grid;
+  font-family: 'Roboto', sans-serif;
+  overflow-x: hidden; }
+
+footer {
+  grid-area: footer;
+  background: #fff;
+  /* background-image: url(../img/pattern-1.png); */
+  background-repeat: repeat-x;
+  position: sticky;
+  bottom: 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center; }
+  footer .rrss {
+    text-align: center;
+    font-size: 2.2rem; }
+  footer .links-relativos ul {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin-left: 12px; }
+
+/*==Estilos==*/
+body.index {
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 80px 60vh 1fr 40px;
+  grid-template-areas: "header header header header header header" "logo logo logo logo logo logo" "showcase showcase showcase showcase showcase showcase" "footer footer footer footer footer footer"; }
+
+header {
+  background-color: navajowhite;
+  grid-area: header;
+  display: grid; }
+  header .menuPrincipal {
+    padding: 0 30px;
+    display: flex;
+    flex-flow: row wrap; }
+    header .menuPrincipal button {
+      border: none; }
+    header .menuPrincipal span {
+      font-size: 1.2em;
+      display: inline-block;
+      flex-grow: 0;
+      padding: 10px;
+      text-transform: uppercase;
+      letter-spacing: .5em;
+      text-indent: 6px;
+      color: palevioletred;
+      border: 1px solid palevioletred;
+      height: 40px;
+      align-self: center; }
+    header .menuPrincipal ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-evenly;
+      align-content: flex-start;
+      flex-grow: 1; }
+      header .menuPrincipal ul li {
+        padding: 12px 0; }
+        header .menuPrincipal ul li a {
+          color: #ef4723 !important;
+          font-size: 1.3rem;
+          flex-grow: 1;
+          text-align: center;
+          margin: 0px 16px; }
+
+section.logo {
+  grid-area: logo;
+  background-image: linear-gradient(to right bottom, rgba(90, 30, 10, 0.6), rgba(90, 30, 10, 0.4)), url(../img/bg-3.jpg);
+  background-size: cover;
+  animation: clipPathDown 5s ease-out;
+  animation-fill-mode: forwards;
+  text-align: center;
+  color: oldlace; }
+  section.logo .contenedor-logo {
+    animation: scaleLogo 1s ease-in-out 1s;
+    animation-fill-mode: backwards;
+    backface-visibility: hidden;
+    margin: 15px auto;
+    text-align: center; }
+    section.logo .contenedor-logo img {
+      height: 120px;
+      margin: 10px 0;
+      text-align: center; }
+  section.logo h1 {
+    font-weight: 400;
+    font-size: 2.3rem; }
+  section.logo h2 {
+    font-style: italic;
+    font-size: 1.8rem; }
+  section.logo p {
+    font-size: 1.3rem;
+    line-height: 1.6;
+    font-weight: 700;
+    display: block;
+    border-radius: 5px;
+    padding: 20px;
+    width: 30vw;
+    background: #ffe7c5;
+    color: #951e03;
+    margin: 12px auto 6px auto; }
+
+section.frontMsg {
+  grid-area: frontMsg;
+  position: relative; }
+
+section.showcase {
+  grid-area: showcase;
+  position: relative;
+  top: -15vh;
+  width: 55vw;
+  margin: 0 auto; }
+  section.showcase .item-showcase {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 1fr 2fr;
+    grid-template-areas: "foto foto nombre nombre nombre precio" "foto foto ingredientes ingredientes ingredientes precio";
+    grid-column-gap: 6px;
+    grid-row-gap: 6px;
+    border-radius: 5px; }
+    section.showcase .item-showcase--foto {
+      grid-area: foto; }
+      section.showcase .item-showcase--foto img {
+        padding: 10px;
+        height: 225px; }
+    section.showcase .item-showcase--nombre {
+      padding: 10px;
+      grid-area: nombre;
+      background: rgba(229, 63, 63, 0.8);
+      color: #fafafa; }
+      section.showcase .item-showcase--nombre h2 {
+        margin: 5px;
+        padding: 5px; }
+    section.showcase .item-showcase--ingredientes {
+      padding: 10px;
+      grid-area: ingredientes;
+      background: rgba(229, 63, 63, 0.8);
+      color: #fafafa; }
+      section.showcase .item-showcase--ingredientes ul {
+        margin: 5px;
+        padding: 5px; }
+    section.showcase .item-showcase--precio {
+      padding: 10px;
+      grid-area: precio;
+      background: rgba(229, 63, 63, 0.8);
+      color: #fafafa; }
+      section.showcase .item-showcase--precio h3 {
+        font-size: 1.25rem; }
+      section.showcase .item-showcase--precio h4 {
+        font-size: 28px; }
+
+/*Secciones*/
+body.seccion {
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 80px 1fr 40px;
+  grid-template-areas: "header header header header header header" "content-main content-main content-main content-main content-main content-main" "footer footer footer footer footer footer"; }
+  body.seccion section {
+    padding: 20px; }
+    body.seccion section.content-main {
+      grid-area: content-main; }
+
+.sc--uno {
+  border: 6px solid rgba(233, 136, 24, 0.7); }
+
+.sc--dos {
+  border: 6px solid rgba(107, 190, 107, 0.7); }
+
+.sc--tres {
+  border: 6px solid rgba(163, 74, 190, 0.7); }
+
+@media screen and (max-width: 576px) {
+  body.index {
+    grid-template-rows: 0 60vh 1fr 40px; }
+  header {
+    position: sticky;
+    z-index: 1000; }
+    header .menuPrincipal {
+      padding: 0 10px; }
+      header .menuPrincipal button span {
+        border: none;
+        color: rgba(255, 255, 255, 0.5);
+        text-indent: 20px;
+        padding-top: 13px; }
+      header .menuPrincipal ul {
+        width: 50vw;
+        background: #ffe7c5;
+        border-radius: 3px;
+        border: 1px solid #e53f3f;
+        box-shadow: 2px 2px 10px rgba(40, 40, 40, 0.5); }
+        header .menuPrincipal ul li {
+          width: 100%;
+          border-bottom: 1px solid #ef4723; }
+          header .menuPrincipal ul li:last-child {
+            border-bottom: none; }
+  .btn-chat {
+    width: 65vw; }
+  section.logo {
+    padding-top: 0; }
+    section.logo p {
+      padding: 12px;
+      width: 90%;
+      margin: 12px auto 6px auto; }
+    section.logo .contenedor-logo {
+      margin: 35px auto 0 auto; }
+      section.logo .contenedor-logo img {
+        height: 15vh; }
+  @keyframes clipPathDown {
+    0% {
+      clip-path: ellipse(90% 100% at 50% 0%);
+      background-position: top; }
+    100% {
+      clip-path: ellipse(100% 100% at 50% 0%);
+      background-position: center; } }
+  .mensaje-principal p {
+    display: none; }
+  section.showcase {
+    top: -55px;
+    width: 100vw;
+    padding: 0 12px; }
+    section.showcase .item-showcase {
+      margin-top: 0;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: 1fr 35px 80px;
+      grid-template-areas: "foto foto foto" "nombre nombre nombre" "ingredientes ingredientes precio";
+      grid-column-gap: 6px;
+      grid-row-gap: 6px; }
+      section.showcase .item-showcase--foto {
+        height: 145px;
+        margin: 0 auto; }
+        section.showcase .item-showcase--foto img {
+          height: 180px; }
+      section.showcase .item-showcase--nombre {
+        padding: 0; }
+      section.showcase .item-showcase--ingredientes {
+        padding: 0; }
+      section.showcase .item-showcase--precio h3 {
+        font-size: 1.2rem; }
+  body.seccion {
+    grid-template-rows: 50px 1fr 40px; }
+  .no-mobile {
+    display: none !important; } }

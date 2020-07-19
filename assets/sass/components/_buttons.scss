@@ -1,0 +1,31 @@
+
+
+/*Botones*/
+a,
+.btn:link,
+.btn:visited {
+    text-decoration: none;
+    display: inline-block;
+    backface-visibility: hidden;
+}
+
+.btn {
+    &-chat {
+    padding: 12px 10px;
+    background: rgb(229, 63, 63);
+    color: rgb(255, 231, 197);
+    font-size: 1.3rem;
+    border-radius: 5px;
+    width: 30vw;
+    transition: all .2s ease-out;
+        &:hover {
+            transform: translateY(-3px);
+            color: rgb(255, 231, 197);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, .3);
+        }
+        &:active {
+            transform: translateY(-1px);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, .3);
+        }
+    }
+}

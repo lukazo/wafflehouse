@@ -288,7 +288,7 @@ body.seccion {
         @include padding-page(20px);
         &.content-main {
             grid-area: content-main;
-            background: url(../img/bg-waffle.jpg);
+            background: url('../img/bg-waffle.jpg');
         }
     }
     header {

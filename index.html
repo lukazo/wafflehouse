@@ -19,12 +19,15 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark menuPrincipal">
             <!-- <a class="navbar-brand" href="index.html"></a> -->
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon">Menú</span>
-            </button>        
+            <div id="b1" class="box">
+                <svg id="i1" class="icon navbar-toggler" data-toggle="collapse" data-target="#navbarTogglerDemo02" viewBox="0 0 100 100">
+                  <path id="top-line-1"     d="M30,37 L70,37 Z"></path>
+                  <path id="middle-line-1" 	d="M30,50 L70,50 Z"></path>
+                  <path id="bottom-line-1" 	d="M30,63 L70,63 Z"></path>
+                </svg>
+            </div>    
             <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
               <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                <span class="no-mobile">Menú</span>
                 <li class="nav-item active">
                   <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
                 </li>
@@ -32,13 +35,7 @@
                   <a class="nav-link" href="menu.html">Menú</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="precios.html">Tabla de Precios</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="delivery.html">Delivery</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="contacto.html">Contacto</a>
+                  <a class="nav-link" href="delivery.html">Delivery/Contacto</a>
                 </li>
               </ul>
             </div>
@@ -51,74 +48,80 @@
         <h1>Waffles a domicilio</h1>
         <h2>Square goods for every mood</h2>
         <article class="mensaje-principal">
-            <p>Waffles para todos los gustos! estamos listos para llegar donde estás!</p>
-            <a href="#" class="btn btn-chat">Haz tu pedido al +5612345678</a>
+            <p>Todo tipo de waffles! listos para llegar donde estás!</p>
+            <a href="#" class="btn btn-chat"><span>Haz tu pedido al +5612345678</span></a>
         </article>
     </section>
     <section class="showcase">
-        <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
+        <div id="carouselExampleFade" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <div class="item-showcase show-1 sc--uno">
                         <figure class="item-showcase--foto">
                             <img src="img/waffle.png" class="d-block">
                         </figure>
-                        <div class="item-showcase--nombre">
-                            <h2>Sweet Dreams</h2>
-                        </div>
-                        <div class="item-showcase--ingredientes">
-                            <ul class="lista-ingredientes">
-                                <li>Frutilla</li>
-                                <li>Marshmellow</li>
-                                <li>Salsa de Frambuesa</li>
-                            </ul>
-                        </div>
-                        <div class="item-showcase--precio">
-                            <h3>3 waffles + Salsa</h3>
-                            <h4>$2.090</h4>
-                        </div>
+                        <article>
+                            <div class="item-showcase--nombre">
+                                <h2>Sweet Dreams</h2>
+                            </div>
+                            <div class="item-showcase--ingredientes">
+                                <ul class="lista-ingredientes">
+                                    <li>Frutilla</li>
+                                    <li>Marshmellow</li>
+                                    <li>Salsa de Frambuesa</li>
+                                </ul>
+                            </div>
+                            <div class="item-showcase--precio">
+                                <h3>4 piezas + Salsa</h3>
+                                <h4>$2.090</h4>
+                            </div>
+                        </article>
                     </div>
                 </div>
                 <div class="carousel-item">
                     <div class="item-showcase show-2 sc--dos">
                         <figure class="item-showcase--foto">
-                            <img src="img/waffle.png" class="d-block">
+                            <img src="img/waffle2.png" class="d-block">
                         </figure>
-                        <div class="item-showcase--nombre">
-                            <h2>Sonic Boom</h2>
-                        </div>
-                        <div class="item-showcase--ingredientes">
-                            <ul class="lista-ingredientes">
-                                <li>Piña</li>
-                                <li>Kiwi</li>
-                                <li>Salsa de chocolate blanco</li>
-                            </ul>
-                        </div>
-                        <div class="item-showcase--precio">
-                            <h3>3 waffles + Salsa</h3>
-                            <h4>$2.090</h4>
-                        </div>
+                        <article>
+                            <div class="item-showcase--nombre">
+                                <h2>Sonic Boom</h2>
+                            </div>
+                            <div class="item-showcase--ingredientes">
+                                <ul class="lista-ingredientes">
+                                    <li>Piña</li>
+                                    <li>Kiwi</li>
+                                    <li>Salsa de chocolate blanco</li>
+                                </ul>
+                            </div>
+                            <div class="item-showcase--precio">
+                                <h3>4 piezas + Salsa</h3>
+                                <h4>$2.090</h4>
+                            </div>
+                        </article>
                     </div>
                 </div>
                 <div class="carousel-item">
                     <div class="item-showcase show-3 sc--tres">
                         <figure class="item-showcase--foto">
-                            <img src="img/waffle.png" class="d-block">
+                            <img src="img/waffle3.png" class="d-block">
                         </figure>
-                        <div class="item-showcase--nombre">
-                            <h2>Sweet Dreams</h2>
-                        </div>
-                        <div class="item-showcase--ingredientes">
-                            <ul class="lista-ingredientes">
-                                <li>Frutilla</li>
-                                <li>Marshmellow</li>
-                                <li>Salsa de Frambuesa</li>
-                            </ul>
-                        </div>
-                        <div class="item-showcase--precio">
-                            <h3>3 waffles + Salsa</h3>
-                            <h4>$2.090</h4>
-                        </div>
+                        <article>
+                            <div class="item-showcase--nombre">
+                                <h2>Surfin Pops</h2>
+                            </div>
+                            <div class="item-showcase--ingredientes">
+                                <ul class="lista-ingredientes">
+                                    <li>Arándanos</li>
+                                    <li>Chocolate Chips</li>
+                                    <li>Helado de vainilla</li>
+                                </ul>
+                            </div>
+                            <div class="item-showcase--precio">
+                                <h3>4 piezas + Salsa</h3>
+                                <h4>$2.090</h4>
+                            </div>
+                        </article>
                     </div>
                 </div>
             </div>
@@ -141,7 +144,7 @@
         </div>
         <article class="links-relativos">
             <ul>
-                <li><a href="precios.html">Formas de Pago</a></li>
+                <li><a href="menu.html">Formas de Pago</a></li>
                 <li><a href="delivery.html">Medidas COVID</a></li>
             </ul>
         </article>         
@@ -149,5 +152,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/409445/animateAnything.js"></script>
+
 </body>
 </html>

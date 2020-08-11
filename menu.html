@@ -20,36 +20,182 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark menuPrincipal">
             <!-- <a class="navbar-brand" href="index.html"></a> -->
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon">Menú</span>
-            </button>        
+            <div id="b1" class="box">
+              <svg id="i1" class="icon navbar-toggler" data-toggle="collapse" data-target="#navbarTogglerDemo02" viewBox="0 0 100 100">
+                <path id="top-line-1"     d="M30,37 L70,37 Z"></path>
+                <path id="middle-line-1" 	d="M30,50 L70,50 Z"></path>
+                <path id="bottom-line-1" 	d="M30,63 L70,63 Z"></path>
+              </svg>
+          </div>         
             <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
               <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                <span class="no-mobile">Menú</span>
-                <li class="nav-item active">
+                <li class="nav-item">
                   <a class="nav-link" href="index.html">Inicio <span class="sr-only">(current)</span></a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item active">
                   <a class="nav-link" href="#">Menú</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="precios.html">Tabla de Precios</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="delivery.html">Delivery</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="contacto.html">Contacto</a>
+                  <a class="nav-link" href="delivery.html">Delivery/Contacto</a>
                 </li>
               </ul>
             </div>
         </nav>      
     </header>
-    <section>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat ipsum possimus voluptatum impedit repudiandae vitae doloribus distinctio laudantium alias itaque nesciunt, quibusdam consequuntur quisquam doloremque reiciendis iure beatae voluptatem est.</p>
+    <section class="content-main">
+        <section class="menu-dulce">
+          <ul>
+            <li>
+              <figure>
+                <img src="img/waffle.png" alt="">
+              </figure>
+              <h3>Sweet Dreams</h3>
+              <h4>Piña</h4>
+              <h4>Kiwi</h4>
+              <h4>Salsa Chocolate</h4>
+            </li>
+            <li>
+              <figure>
+                <img src="img/waffle2.png" alt="">
+              </figure>
+              <h3>Sonic Boom</h3>
+              <h4>Frutilla</h4>
+              <h4>Marshmellow</h4>
+              <h4>Salsa chocolate blanco</h4>
+            </li>
+            <li>
+              <figure>
+                <img src="img/waffle3.png" alt="">
+              </figure>
+              <h3>Surfin Pops</h3>
+              <h4>Arándanos</h4>
+              <h4>Chocolate Chips</h4>
+              <h4>Helado de vainilla</h4>
+            </li>
+            <!-- <li>
+              BUFFALO SPLIT
+  BOLA DE HELADO, PL&ACUTE;, SNICKERS, SALSA DE CHOCOLATE Y CREMA CHANTILLY
+            </li>
+            <li>
+              CHOCO LADY
+  BOLA DE HELADO, FRUTILLA, TOBLERONE, SALSA DE MANJAR Y CREMA CHANTILLY.
+            </li>
+            <li>
+              CHEESECAKE
+  CHEESECAKE DE LIMÓN, NUTELLA, FRUTILLAS, GALLETAS OREOS Y CREMA CHANTILLY.
+            </li>
+            <li>
+              STRAWBERRY FIELDS
+  NUTELLA, MANJAR, FRUTILLAS, PLÁTANO Y CREMA CHANTILLY.
+            </li>
+            <li>
+              COOKIE
+  GALLETA DE VAINILLA, NUTELLA Y FRUTILLAS
+            </li> -->
+          </ul>
+        </section>
+        <!-- <section class="menu-salado">
+          <ul>
+            <li>
+              Cheddar
+DOBLE QUESO CHEDDAR, DOBLE TOCINO CROCANTE, RÚCULA, TOMATES CHERRY Y PAPITAS HILO.
+            </li>
+            <li>
+              PASTRAMI
+QUESO CHEDDAR, QUESO MANTECOSO, PASTRAMI, TOMATES CHERRY, RÚCULA Y PAPITAS HILO.
+            </li>
+            <li>
+              OLD TURKEY
+JAMÓN DE PAVO, CEBOLLAS CARAMELIZADAS, QUESO MANTECOSO, TOMATES CHERRY, RÚCULA Y PAPITAS HILO.
+            </li>
+            <li>
+              VEGETARIANO
+QUESO DE CABRA, PIMENTONES ASADOS, RÚCULA, TOMATES CHERRY Y PAPITAS HILO.
+            </li>
+            <li>
+              SERRANO
+JAMÓN SERRANO, QUESO MANTECOSO, PIMENTONES ASADOS, TOMATES CHERRY, RÚCULA Y PAPITAS HILO.
+            </li>
+          </ul>
+        </section>
+        <section class="menu-especial">
+          <ul>
+            <li>
+              Pollo Thai
+POLLO SALTEADO ESTILO THAI, PIMENTONES ASADOS, QUESO MANTECOSO, TOMATE CHERRY, RÚCULA, PAPITAS HILO Y SALSA SWEET & SPICY.
+            </li>
+            <li>
+              MI CHANCHITA
+PLATEADA DE CERDO AHUMADA, DOBLE QUESO CHEEDAR, CEBOLLAS CARAMELIZADAS, TOMATES CHERRY, RÚCULA, PAPITAS HILO Y MOSTAZA DULCE.
+            </li>
+            <li>
+              GRAN MECHADA
+              SUAVE MECHADA DE VACUNO, PALTA HASS, QUESO MANTECOSO, TOMATES CHERRY Y PAPITAS HILO.
+            </li>
+          </ul>
+        </section> -->
+        <section class="tabla-precios">
+          <h2>Lista de precios</h2>
+          <p>Nuestra lista de productos se esta siempre renovando y anunciando nuevos productos, atent@ a las promos!.</p>
+          
+          <table class="table table-bordered table-hover">
+              <thead>
+                <tr>
+                  <th scope="col">Producto</th>
+                  <th scope="col">Ingredientes</th>
+                  <th scope="col">Precio</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Sweet Dreams</th>
+                  <td>
+                      <ul>
+                          <li>Frutilla</li>
+                          <li>Marshmellow</li>
+                          <li>Salsa de frambuesa</li>
+                      </ul>
+                  </td>
+                  <td>$1.890.- CLP</td>
+                </tr>
+                <tr>
+                  <th scope="row">Sonic Boom</th>
+                  <td>
+                      <ul>
+                          <li>Piña</li>
+                          <li>Kiwi</li>
+                          <li>Salsa chocolate blanco</li>
+                      </ul>
+                  </td>
+                  <td>$1.890.- CLP</td>
+                </tr>
+                <tr>
+                  <th scope="row">Surfin Pops</th>
+                  <td>
+                      <ul>
+                          <li>Arándanos</li>
+                          <li>Chocolate Chips</li>
+                          <li>Helado de vainilla</li>
+                      </ul>
+                  </td>
+                  <td>$1.890.- CLP</td>
+                </tr>
+              </tbody>
+            </table>
+      </section>
     </section>
     <footer>
-        
+      <div class="rrss">
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-tiktok"></i>
+        <i class="fab fa-facebook"></i>
+      </div>
+      <article class="links-relativos">
+          <ul>
+              <li><a href="menu.html">Formas de Pago</a></li>
+              <li><a href="delivery.html">Medidas COVID</a></li>
+          </ul>
+      </article>   
     </footer>
 
 </body>

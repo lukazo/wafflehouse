@@ -11,21 +11,32 @@ a,
 
 .btn {
     &-chat {
-    padding: 12px 10px;
-    background: rgb(229, 63, 63);
-    color: rgb(255, 231, 197);
+    padding: 24px 10px;
+    background: $color-secundario;
+    color: $color-white;
     font-size: 1.3rem;
     border-radius: 5px;
-    width: 30vw;
+    width: calc(30% - #{$margin-med});
+    margin-left: $margin-med;
     transition: all .2s ease-out;
+        span {
+            display: block;
+        }
         &:hover {
             transform: translateY(-3px);
-            color: rgb(255, 231, 197);
+            color: $color-white;
             box-shadow: 0 10px 20px rgba(0, 0, 0, .3);
         }
         &:active {
             transform: translateY(-1px);
             box-shadow: 0 5px 10px rgba(0, 0, 0, .3);
         }
+    }
+    &-submit {
+        color: $color-white;
+        background: $color-secundario;
+        padding: 10px 25px;
+        border-radius: 100px !important;
+        font-size: 1.3rem;
     }
 }

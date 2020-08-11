@@ -15,39 +15,75 @@
     
         <link rel="stylesheet" href="assets/estilo.css">
     </head>
-    <body class="seccion">
+    <body class="seccion seccion-delivery">
         <header>
             <nav class="navbar navbar-expand-lg navbar-dark menuPrincipal">
                 <!-- <a class="navbar-brand" href="index.html"></a> -->
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon">Menú</span>
-                </button>        
+                <div id="b1" class="box">
+                  <svg id="i1" class="icon navbar-toggler" data-toggle="collapse" data-target="#navbarTogglerDemo02" viewBox="0 0 100 100">
+                    <path id="top-line-1"     d="M30,37 L70,37 Z"></path>
+                    <path id="middle-line-1" 	d="M30,50 L70,50 Z"></path>
+                    <path id="bottom-line-1" 	d="M30,63 L70,63 Z"></path>
+                  </svg>
+              </div>         
                 <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                   <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                    <span class="no-mobile">Menú</span>
-                    <li class="nav-item active">
+                    <li class="nav-item">
                       <a class="nav-link" href="index.html">Inicio <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link" href="menu.html">Menú</a>
                     </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="precios.html">Tabla de Precios</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">Delivery</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="contacto.html">Contacto</a>
+                    <li class="nav-item active">
+                      <a class="nav-link" href="#">Delivery/Contacto</a>
                     </li>
                   </ul>
                 </div>
             </nav>      
         </header>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat ipsum possimus voluptatum impedit repudiandae vitae doloribus distinctio laudantium alias itaque nesciunt, quibusdam consequuntur quisquam doloremque reiciendis iure beatae voluptatem est.</p>
+        <section class="content-main content-main-delivery">
+          <section class="delivery-map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d22397.271144275102!2d-70.58641615530608!3d-33.43955420754085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2scl!4v1597185225277!5m2!1ses!2scl" width="100%"  frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+          </section>
+          <section class="delivery-form">
+            <h2>Hola!, comunicate con nosotros</h2>
+            <form class="col-md-12" action="" method="">
+              <div class="form-group">
+                  <label for="nombre">Nombre:</label>
+                  <input class="form-control" type="text" name="nombre" size="40">
+              </div>
+              <div class="form-group">
+                  <label for="tipoConsulta">Tipo de consulta</label>
+                  <select class="form-control">
+                      <option>Pedido diferido</option>
+                      <option>Pedido al por mayor</option>
+                      <option>Consulta comercial</option>
+                  </select> 
+              </div>
+              <div class="form-group">
+                  <label for="checkbox">Suscribirme a descuentos</label>
+                  <input type="checkbox" name="">
+              </div>
+              <div class="form-group">
+                  <!-- <button class="btn btn-default" type="reset">Limpiar formulario</button> -->
+                  <button class="btn btn-default btn-submit" type="submit">Enviar</button>
+              </div>
+          </form>
+          </section>
+        </section>
         <footer>
+          <div class="rrss">
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-tiktok"></i>
+            <i class="fab fa-facebook"></i>
+          </div>
+          <article class="links-relativos">
+              <ul>
+                  <li><a href="#">Formas de Pago</a></li>
+                  <li><a href="#">Medidas COVID</a></li>
+              </ul>
+          </article>   
             
         </footer>
-
     </body>
 </html>

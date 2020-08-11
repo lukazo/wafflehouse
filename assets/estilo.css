@@ -314,7 +314,7 @@ body.seccion {
     padding: 20px; }
     body.seccion section.content-main {
       grid-area: content-main;
-      background: url(../../img/bg-waffle.jpg); }
+      background: url(../img/bg-waffle.jpg); }
   body.seccion header {
     background-image: linear-gradient(to right bottom, rgba(90, 30, 10, 0.6), rgba(90, 30, 10, 0.4)), url(../img/bg-5.jpg);
     background-size: cover;
